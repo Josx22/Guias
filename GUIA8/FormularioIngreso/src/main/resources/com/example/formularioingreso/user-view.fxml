@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.formularioingreso.UserController">
+    <children>
+        <Label text="Bienvenido al Sistema">
+            <font> <Font size="18.0" /> </font>
+        </Label>
+
+        <Label fx:id="lblInfoUsuario" text="Usuario: ...">
+            <font> <Font name="System Bold" size="14.0" /> </font>
+        </Label>
+
+        <Button text="Cerrar Sesión" onAction="#handleLogout"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white;" />
+    </children>
+</VBox>

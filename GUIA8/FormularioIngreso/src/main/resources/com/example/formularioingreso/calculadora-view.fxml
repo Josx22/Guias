@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.formularioingreso.CalculadoraController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Calculadora de n Números" style="-fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtNumero" promptText="Ingrese un número"/>
+        <Button text="Añadir" onAction="#agregarNumero"/>
+    </HBox>
+
+    <Label text="Números ingresados:"/>
+    <ListView fx:id="lvNumeros" prefHeight="100"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <ComboBox fx:id="cbOperacion" promptText="Operación"/>
+        <Button text="Calcular" onAction="#ejecutarOperacion"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+        <Button text="Limpiar" onAction="#limpiarTodo"/>
+    </HBox>
+
+    <Label fx:id="lblResultado" text="Resultado: " style="-fx-font-size: 16px;"/>
+</VBox>

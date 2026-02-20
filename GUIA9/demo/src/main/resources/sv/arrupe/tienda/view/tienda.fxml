@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sv.arrupe.tienda.MainController"
+      stylesheets="@../style/styles.css">
+
+
+<Label text="Tienda de Productos" />
+    <TextField fx:id="txtNombre" promptText="Nombre"/>
+    <TextField fx:id="txtPrecio" promptText="Precio"/>
+    <TextField fx:id="txtStock" promptText="Stock"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtBusqueda" promptText="Buscar por nombre..." />
+        <Button text="Buscar" onAction="#buscarProducto" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Agregar" onAction="#agregarProducto" styleClass="button-add" />
+        <Button text="Actualizar" onAction="#actualizarProducto" styleClass="button-update" />
+        <Button text="Eliminar" onAction="#eliminarProducto" styleClass="button-delete" />
+        <Button text="Limpiar" onAction="#limpiarCampos" />
+    </HBox>
+
+    <TableView fx:id="tablaProductos"  onMouseClicked="#seleccionarDeTabla">
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colPrecio" text="Precio"/>
+            <TableColumn fx:id="colStock" text="Stock"/>
+        </columns>
+    </TableView>
+    <Label fx:id="lblTotales" text="Productos: 0 | Valor: $0.00" style="-fx-font-weight: bold;" />
+</VBox>

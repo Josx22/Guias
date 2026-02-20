@@ -1,0 +1,13 @@
+﻿@model TiendaOnline.Models.Producto
+
+<h3 class="text-danger">¿Eliminar este producto permanentemente?</h3>
+<div>
+    <p>Nombre: @Model.Nombre</p>
+    <p>Precio: @Model.Precio</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="id" value="@Model.ProductoId" />
+    <button type="submit" class="btn btn-danger">Confirmar Borrado</button>
+    <a asp-action="Index">Cancelar</a>
+</form>
